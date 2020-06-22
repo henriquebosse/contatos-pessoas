@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Cadastro de Contatos</h1>
+        <h2>Cadastro</h2>
+
+        <form method="POST" action="/cadastrar">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input class="form-control" type="text" name="nome" id="nome" th:value="${contatos.nome}"/>
+            </div>
+
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input class="form-control" type="text" name="endereco" id="endereco" th:value="${contatos.endereco}" />
+            </div>
+
+            <div class="form-group">
+                <label for="numero">Nº</label>
+                <input class="form-control" type="text" name="numero" id="numero" th:value="${contatos.numero}" />
+            </div>
+
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input class="form-control" type="text" name="bairro" id="bairro" th:value="${contatos.bairro}" />
+            </div>
+
+            <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input class="form-control" type="text" name="cidade" id="cidade" th:value="${contatos.cidade}" />
+            </div>
+
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input class="form-control" type="text" name="cep" id="cep" th:value="${contatos.cep}" />
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input class="form-control" type="email" name="email" id="email" th:value="${contatos.email}" />
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input class="form-control" type="text" name="telefone" id="telefone" th:value="${contatos.telefone}" />
+            </div>
+
+            <div class="form-group">
+                <label for="dtCadastro">Data de Cadastro</label>
+                <input class="form-control" type="date" name="dtCadastro" id="dtCadastro" th:value="${contatos.dtCadastro}" />
+            </div>
+
+            <input type="hidden" name="id" th:value="${contatos.id}" />
+
+            </br>
+            <input class="btn btn-primary" type="submit" value="Enviar" />
+
+        </form>
+    
+    
+        <a href="/">Retornar</a>
+    </div>    
+
+    <script src="/js/jquery-3.5.1.slim.min.css"></script>
+    <script src="/js/popper.min.css"></script>
+    <script src="/js/bootstrap.min.css"></script>
+</body>
+</html>
